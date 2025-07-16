@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # engenharia_de_software
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Trabalho-de-Engenharia-de-Software
+>>>>>>> 45fba40f654dd1e862b988c7c7d50d72acfe4db5
