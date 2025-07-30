@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'signup_screen.dart'; // Importa a tela de cadastro
+import 'home_screen.dart';  // Importa a tela de home
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -81,6 +82,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
                   final email = _emailController.text;
                   final senha = _senhaController.text;
                   print('Botão Entrar Pressionado!');
