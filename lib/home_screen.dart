@@ -1,17 +1,17 @@
+// lib/home_screen.dart
+
 import 'package:flutter/material.dart';
 
 // Importa as telas de destino e o widget do drawer
 import 'definirRota_screen.dart';
 import 'checkIn_screen.dart';
-import 'listaFrequencia_screen.dart';
-import 'frequenciaDia_screen.dart';
+import 'listaFrequencia_screen.dart'; // Mantido por enquanto, mas um botão aponta para a nova tela
+import 'frequenciaDia_screen.dart'; // Aponta para o arquivo com a classe correta
 import 'widgets/my_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
-  // 1. ADICIONADO UM CAMPO PARA RECEBER O NOME DO USUÁRIO
   final String nomeUsuario;
 
-  // 2. ATUALIZADO O CONSTRUTOR PARA EXIGIR O NOME DO USUÁRIO
   const HomeScreen({super.key, required this.nomeUsuario});
 
   @override
@@ -24,13 +24,11 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF303030),
         foregroundColor: Colors.white,
         actions: [
-          // 3. ADICIONADO O ÍCONE DE PERFIL NA APPBAR
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: CircleAvatar(
               backgroundColor: Colors.white70,
               child: Text(
-                // Pega as duas primeiras letras do nome para a inicial
                 nomeUsuario.isNotEmpty
                     ? nomeUsuario.substring(0, 1).toUpperCase()
                     : 'U',
@@ -48,7 +46,6 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 4. ADICIONADA A SAUDAÇÃO PERSONALIZADA
             Text(
               'Bem-vindo(a), $nomeUsuario!',
               style: const TextStyle(
@@ -58,7 +55,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            // O GridView agora fica dentro de um Expanded para preencher o resto da tela
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
@@ -96,10 +92,11 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.list_alt,
                     label: 'Lista de Frequência',
                     onTap: () {
+                      // CORRIGIDO: Ambos os botões podem apontar para a mesma tela funcional por enquanto
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ListaFrequenciaScreen(),
+                          builder: (context) => FrequenciaDoDiaScreen(),
                         ),
                       );
                     },
@@ -109,10 +106,11 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.today,
                     label: 'Frequência do Dia',
                     onTap: () {
+                      // CORRIGIDO: Apontando para a classe correta
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const FrequenciaDiaScreen(),
+                          builder: (context) => FrequenciaDoDiaScreen(),
                         ),
                       );
                     },
