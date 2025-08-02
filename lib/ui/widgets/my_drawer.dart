@@ -1,5 +1,7 @@
+import 'package:engenharia_de_software/ui/screens/account_info_page.dart';
+import 'package:engenharia_de_software/ui/screens/config_page.dart';
 import 'package:flutter/material.dart';
-import '../login_screen.dart'; // Importa a tela de login para o logout
+import '../screens/login_screen.dart'; // Importa a tela de login para o logout
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -23,7 +25,10 @@ class MyDrawer extends StatelessWidget {
             title: const Text('Meu Perfil'),
             onTap: () {
               // Lógica para navegar para a tela de perfil
-              Navigator.pop(context); // Fecha o drawer
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const AccountInfoPage()),
+                  );
             },
           ),
           ListTile(
@@ -31,7 +36,10 @@ class MyDrawer extends StatelessWidget {
             title: const Text('Configurações'),
             onTap: () {
               // Lógica para navegar para a tela de configurações
-              Navigator.pop(context); // Fecha o drawer
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ConfigPage()),
+                  );
             },
           ),
           const Divider(), // Uma linha divisória

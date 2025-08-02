@@ -7,7 +7,7 @@ import 'definirRota_screen.dart';
 import 'checkIn_screen.dart';
 import 'listaFrequencia_screen.dart'; // Mantido por enquanto, mas um botão aponta para a nova tela
 import 'frequenciaDia_screen.dart'; // Aponta para o arquivo com a classe correta
-import 'widgets/my_drawer.dart';
+import '../widgets/my_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   final String nomeUsuario;

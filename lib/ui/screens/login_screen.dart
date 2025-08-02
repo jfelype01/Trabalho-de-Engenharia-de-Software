@@ -38,6 +38,17 @@ class _LoginScreenState extends State<LoginScreen> {
     );
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Login'),
+        backgroundColor: const Color(0xFF303030),
+        foregroundColor: Colors.white,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Volta para a tela anterior
+          },
+        ),
+      ),
       // 1. Fundo escuro aplicado
       backgroundColor: const Color(0xFF424242),
       body: Center(

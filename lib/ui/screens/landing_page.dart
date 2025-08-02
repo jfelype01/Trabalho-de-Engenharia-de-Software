@@ -1,7 +1,7 @@
 import 'package:engenharia_de_software/constants/colorsConstants.dart';
 import 'package:engenharia_de_software/constants/imagesConstants.dart';
-import 'package:engenharia_de_software/ui/screens/login_page.dart';
-import 'package:engenharia_de_software/ui/screens/signup_page.dart';
+import 'package:engenharia_de_software/ui/screens/login_screen.dart';
+import 'package:engenharia_de_software/ui/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class Landing_Page extends StatelessWidget {
@@ -44,7 +44,7 @@ class Landing_Page extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const LoginPage()),
+                    MaterialPageRoute(builder: (_) => const LoginScreen()),
                   );
                 },
                 child: Text(
@@ -68,7 +68,7 @@ class Landing_Page extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const SignupPage()),
+                    MaterialPageRoute(builder: (_) => const SignupScreen()),
                   );
                 },
                 child: Text(
