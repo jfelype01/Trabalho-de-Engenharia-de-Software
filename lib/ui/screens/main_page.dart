@@ -1,4 +1,5 @@
 import 'package:engenharia_de_software/ui/screens/config_page.dart';
+import 'package:engenharia_de_software/ui/screens/notifications_page.dart';
 import 'package:flutter/material.dart';
 import 'package:engenharia_de_software/constants/colorsConstants.dart';
 import 'package:engenharia_de_software/constants/imagesConstants.dart';
@@ -88,7 +89,10 @@ class MainPage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.notifications),
             onPressed: () {
-              // Abrir tela de notificações
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => NotificationsPage()),
+              );
             },
           ),
         ],
