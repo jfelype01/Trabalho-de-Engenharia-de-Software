@@ -78,8 +78,13 @@ class _CheckInScreenState extends State<CheckInScreen> {
       ), // Fundo cinza escuro, como no Figma
       appBar: AppBar(
         title: const Text('Frequência'),
-        backgroundColor: Colors.grey[300], // Cinza claro, como no Figma
-        foregroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(
+          255,
+          46,
+          45,
+          45,
+        ), // Cinza claro, como no Figma
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Column(
