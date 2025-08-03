@@ -1,12 +1,10 @@
-// lib/home_screen.dart
-
 import 'package:flutter/material.dart';
 
-// Importa as telas de destino e o widget do drawer
+// Importa TODAS as telas de destino e o widget do drawer
 import 'definirRota_screen.dart';
 import 'checkIn_screen.dart';
-import 'listaFrequencia_screen.dart'; // Mantido por enquanto, mas um botão aponta para a nova tela
-import 'frequenciaDia_screen.dart'; // Aponta para o arquivo com a classe correta
+import 'listaFrequencia_screen.dart'; // Tela da LISTA
+import 'frequenciaDia_screen.dart'; // Tela de SELEÇÃO DE ITINERÁRIO
 import 'widgets/my_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -92,11 +90,11 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.list_alt,
                     label: 'Lista de Frequência',
                     onTap: () {
-                      // CORRIGIDO: Ambos os botões podem apontar para a mesma tela funcional por enquanto
+                      // ===== CORRIGIDO: Apontando para a tela da LISTA =====
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FrequenciaDoDiaScreen(),
+                          builder: (context) => ListaFrequenciaScreen(),
                         ),
                       );
                     },
@@ -106,11 +104,11 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.today,
                     label: 'Frequência do Dia',
                     onTap: () {
-                      // CORRIGIDO: Apontando para a classe correta
+                      // ===== CORRIGIDO: Apontando para a tela de SELEÇÃO DE ITINERÁRIO =====
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FrequenciaDoDiaScreen(),
+                          builder: (context) => const FrequenciaDoDiaScreen(),
                         ),
                       );
                     },
